@@ -1,4 +1,5 @@
 //Video-1: Master The Basics Logics of JS-> Variables, Operators & Operations on Operators.
+console.log("Video 1")
 
 
 //1- Sum of Two (2) Numbers =>
