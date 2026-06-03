@@ -190,3 +190,79 @@ console.log(merge);
 
 
 // 5- Best Time to Buy & Sell Stocks.
+let arr10 = [3, 2, 1, 5, 4, 6];
+
+let lowestVal = arr10[0];
+let maxVal = arr10[0];
+
+
+for (let i = 0; i < arr10.length; i++) {
+    
+    if(lowestVal > arr10[i]) {
+        lowestVal = arr10[i];
+    }
+    else if (maxVal < arr10[i]) {
+        maxVal = arr10[i];
+    }
+    
+}
+
+let maxProfit = maxVal - lowestVal;
+
+console.log(`Lowest Value: ${lowestVal} & Maximum Value: ${maxVal}`);
+console.log("Maximum Profit:", maxProfit);
+
+
+                    //OR      (Return 0 on MaxProfit if No Transaction After Buy);
+
+let arr11 = [3, 2, 1, 5, 4, 7];
+
+let lowestVal2 = arr11[0];
+let maxVal2 = arr11[0];
+
+let maxProfit2 = 0;
+
+for (let i = 0; i < arr11.length; i++) {
+    if(lowestVal2 > arr11[i]) {
+        lowestVal2 = arr11[i];
+    }
+    else if (maxVal2 < arr10[i]) {
+        maxVal2 = arr11[i];
+    }
+    let profit = maxVal2 - lowestVal2;
+    maxProfit2 = Math.max(maxProfit2, profit); 
+}
+
+
+console.log(`Lowest Value2: ${lowestVal2} & Maximum Value2: ${maxVal2}`);
+console.log("Maximum Profit2:", maxProfit2);
+
+
+
+
+
+// 6- Sort the People.   As=>
+// Input: names = ["Mary","John","Emma"], heights = [180,165,170]
+// Output: ["Mary","Emma","John"]
+// Explanation: Mary is the tallest, followed by Emma and John.
+
+let names = ['Mary', 'John', 'Emma'];  
+let heights = [180, 165, 170];
+
+for(let i = 0; i < heights.length; i++) {
+    for (let j = i +1; j < heights.length; j++) {
+
+        if(heights[i] < heights[j]) {
+
+            let tempHeights = heights[i];     //Swap Heights.
+            heights[i] = heights[j];
+            heights[j] = tempHeights;
+
+
+            let tempNames = names[i];         //Swap Names As Heights.
+            names[i] = names[j];
+            names[j] = tempNames;
+        }
+    }
+}
+console.log(names);

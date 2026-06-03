@@ -166,7 +166,7 @@ while ( i < arr9.length ) {
     
     if( arr9[i] == 0 ) {         //Here If value of Array == 0, then swap it (i) on the place (j);
 
-        let temp = arr9[i];
+        let temp = arr9[i];      //This is Swapping.
         arr9[i] = arr9[j];
         arr9[j] = temp;
         j++ 
