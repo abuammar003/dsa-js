@@ -266,3 +266,32 @@ for(let i = 0; i < heights.length; i++) {
     }
 }
 console.log(names);
+
+
+
+
+
+
+// 7- Sort the Colors.           //As=>
+// Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
+// We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+// You must solve this problem without using the library's sort function.
+
+// let arr12 = [0, 1, 1, 2, 0, 2];               //OutPut=>  [0, 0, 1, 1, 2, 2];
+
+
+let arr12 = [0, 1, 1, 2, 0, 2];
+
+arr12.sort((a, b) => a - b);
+
+console.log(arr12);
+
+
+                //OR
+
+// II- Sort as                          //Output => [2, 2, 1, 1, 0, 0];
+let arr13 = [0, 1, 1, 2, 0, 2];
+
+arr13.sort((a, b) => b - a);
+
+console.log(arr13);
