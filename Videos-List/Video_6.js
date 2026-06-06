@@ -295,3 +295,77 @@ let arr13 = [0, 1, 1, 2, 0, 2];
 arr13.sort((a, b) => b - a);
 
 console.log(arr13);
+
+
+                //OR => By Swapping.
+
+let arr14 = [0, 1, 0, 2, 1, 2];        //Output => [0, 0, 1, 1, 2, 2];   //Pending=> Not Solved Yet.
+
+let i3 = 0, j3 = 0, k3 = arr14.length -1;
+// console.log(arr14[k3]);
+
+while(i3 < k3) {
+
+    if(arr14[i3] == 0) {
+        let temp1arr14 = arr14[i3];
+        arr14[i3] = arr14[j3];
+        arr14[j3] = temp1arr14;
+        j3++;
+        
+    } else if (arr14[i3] == 2) {
+        let temp2arr14 = arr14[i3];
+        arr14[i3] = arr14[k3];
+        arr14[k3] = temp2arr14;
+        k3--;
+    }
+
+    i3++
+}
+console.log(arr14);
+
+
+
+
+// 8- Maximum Subarray / Kadane's Algorithm.
+    //Given an Integer Array arr15, find the Subarray with the Largest sum, & return its Sum.
+    // arr = [1, 2, 3, 8, 5, 4, 9];
+    // subArray = [5, 4, 9];     => Output => 18 (Sum of the Subarray);
+    
+
+let arr15 = [3, 2, -4, 9, 1, -8, 7];         
+            //OR
+// let arr15 = [6, 1, 5, 3, 4, 7];
+
+let sum = 0;
+let maxSum = -Infinity;      //The Lowest Value in the JS(Means if Answer is in -ve so -Infinity will be Lower than it);
+                                // && +Infinity is the Highest Value in the JS.
+
+for(let i = 0; i < arr15.length; i++) {
+
+    sum = sum + arr15[i];
+
+    maxSum = Math.max(maxSum, sum);     //Compares Both maxSum & sum => it will return whose value is Max.
+
+    if(sum < 0) {
+        sum = 0;            //If sum's Value is -ve it will make it 0.
+    }
+
+}
+console.log("Sum of the Whole Array(arr15) =", sum);
+console.log("MaxSum of the Whole Array(arr15) =", maxSum);
+
+
+
+
+// 9- Majority Element / Moore's Voting Algorithm.
+
+
+
+
+
+
+
+
+
+
+// 10- Trapping Rain Water.
