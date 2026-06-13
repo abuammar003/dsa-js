@@ -115,7 +115,9 @@ console.log("Coding Questions Starts Here =>")
 
 
 
-// Q-3- Reverse a String in a Same Line.
+// Q3- Reverse a String in a Same Line.
+    console.log("Q-3=> Reverse a String in Same Line.")
+
     let string13 = "Hello World!";
     let revString13 = string13.split("").reverse().join();
     console.log(revString13);
@@ -133,4 +135,92 @@ console.log("Coding Questions Starts Here =>")
 
 
 
-// Q-4 Check if String is Pallindrom or Not.
+// Q4- Check if String is Pallindrom or Not.
+    //Pallindrom => Pallindrom means String is same in characters or reading from both sides Start and End.
+        // e.g=>  madam, malayalam => They are same. (if we read them from Start as well as from End they are same).
+
+    console.log("Q-4 => Check if String is Pallindrom or Not.");
+
+    let string15 = "malayalam";             // Malayalam = malayalam => It is a Pallindrom.   in (=) single Equals to.
+    // let string15 = "Malayalam";         // Malayalam = malayalam => It is Not a Pallindrom.  in (==)/(===) Equals to. 
+                                                
+    let revString15 = "";
+
+    for(let i = string15.length -1; i >= 0; i--) {
+        revString15 = revString15 + string15[i];
+    }
+    console.log("Reverse of String15 =>", string15);
+
+    // if(string15 = revString15) {
+    if(string15 === revString15) {
+        console.log("String15 is a Pallindrom.");
+        console.log(`Original Str= ${string15} & Reverse Str= ${revString15}`);
+    } else {
+        console.log("String15 is Not a Pallindrom");
+    }
+
+
+                // OR      (String's Value Taking From User by using Prompt).
+    // console.log("Checking String Pallindrom from Propmt's Value.") 
+                
+    // let string16 = prompt("Enter a String's Value.") 
+                                                
+    // let revString16 = "";
+
+    // for(let i = string16.length -1; i >= 0; i--) {
+    //     revString16 = revString16 + string16[i];
+    // }
+    // console.log("Reverse of String16 =>", string16);
+
+    // // if(string15 = revString15) {
+    // if(string16 === revString16) {
+    //     console.log("String16 is a Pallindrom.");
+    //     console.log(`Original Str= ${string16} & Reverse Str= ${revString16}`);
+    // } else {
+    //     console.log("String16 is Not a Pallindrom");
+    //     console.log(`Original Str= ${string16} & Reverse Str= ${revString16}`);
+
+    // }
+
+
+
+
+
+
+// Q5- Toggle Each Character.
+    // Agar String me Koi Element Capital me hai to use Small me Kardo aur Jo Small me hai use Capital kardo.
+        // e.g-     "AbCDeFgh" => "aBcdEfGH";
+
+    // It is Done by using Character Code/Asky Value of the Character.
+
+    console.log("Q5 => Toggle Each Character.");
+
+
+    let string17 = "HeLLo woRLd";
+    // let string17 = this.prompt("Enter a String's Value");           // Taking Value By Prompt.
+    console.log(string17);
+
+    let toggle ="";
+
+    for(let i = 0; i < string17.length; i++) {
+        let character = string17[i];
+
+            // Charcter/Asky Code of Capital Letter from A=65 to Z=90; 
+        if(string17.charCodeAt(i)>=65 && string17.charCodeAt(i)<=90) {       
+            toggle = toggle + String.fromCharCode(string17.charCodeAt(i) + 32);     //Add 32 in curr Asky Code.
+        } 
+            // Character/Asky Code of Small Letters from a=97 to z=122;
+        else if (string17.charCodeAt(i)>=97 && string17.charCodeAt(i)<=122) {
+            toggle = toggle + String.fromCharCode(string17.charCodeAt(i) - 32);    //Sub 32 in curr Asky Code.
+        }
+    
+    }
+    console.log(toggle);
+
+
+
+
+
+
+
+// Q6- 
