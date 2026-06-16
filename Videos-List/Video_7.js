@@ -119,8 +119,8 @@ console.log("Coding Questions Starts Here =>")
     console.log("Q-3=> Reverse a String in Same Line.")
 
     let string13 = "Hello World!";
-    let revString13 = string13.split("").reverse().join();
-    console.log(revString13);
+    let revString13 = string13.split('').reverse().join('');
+    console.log("Reverse a String by Reverse Method=>", revString13);
 
                     // OR
 
@@ -130,7 +130,7 @@ console.log("Coding Questions Starts Here =>")
     for(let i = string14.length -1; i >= 0; i--) {
         revString14 = revString14 + string14[i];      //Just Concating revString14 with each Char of string14.
     }
-    console.log(revString14);
+    console.log("Reverse a String by using Loop=>", revString14);
 
 
 
@@ -203,15 +203,16 @@ console.log("Coding Questions Starts Here =>")
     let toggle ="";
 
     for(let i = 0; i < string17.length; i++) {
-        let character = string17[i];
+
+        let character = string17.charCodeAt(i);
 
             // Charcter/Asky Code of Capital Letter from A=65 to Z=90; 
-        if(string17.charCodeAt(i)>=65 && string17.charCodeAt(i)<=90) {       
-            toggle = toggle + String.fromCharCode(string17.charCodeAt(i) + 32);     //Add 32 in curr Asky Code.
+        if(character>=65 && character<=90) {       
+            toggle = toggle + String.fromCharCode(character + 32);     //Add 32 in curr Asky Code.
         } 
             // Character/Asky Code of Small Letters from a=97 to z=122;
-        else if (string17.charCodeAt(i)>=97 && string17.charCodeAt(i)<=122) {
-            toggle = toggle + String.fromCharCode(string17.charCodeAt(i) - 32);    //Sub 32 in curr Asky Code.
+        else if (character>=97 && character<=122) {
+            toggle = toggle + String.fromCharCode(character - 32);    //Sub 32 in curr Asky Code.
         }
     
     }
@@ -223,4 +224,8 @@ console.log("Coding Questions Starts Here =>")
 
 
 
-// Q6- 
+// Q6- Frequency of each Character.
+        // Counting the Appearance of the Character in String.    //e.g-  hello => h=1, e=1. l=2, o=1.
+
+    let String18 = "Hello World";
+    
