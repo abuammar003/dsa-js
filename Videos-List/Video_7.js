@@ -227,5 +227,24 @@ console.log("Coding Questions Starts Here =>")
 // Q6- Frequency of each Character.
         // Counting the Appearance of the Character in String.    //e.g-  hello => h=1, e=1. l=2, o=1.
 
-    let String18 = "Hello World";
-    
+    console.log("Q6 => Frequency of Each Character in String.");
+
+
+    // let string18 = prompt("Enter a String's Value");           // Taking Value By Prompt.
+    let string18 = "Hello World";
+
+    let frequency = {};
+    // let charCode = 0;
+
+    for(let i = 0; i < string18.length; i++) {
+
+        let char = string18[i];
+        frequency[char] = (frequency[char] || 0) + 1;
+
+        // // Character Code of Each Character in String.
+        // let charCode = string18.charCodeAt(i);
+        // console.log(charCode);
+
+    }
+
+    console.log(frequency);
