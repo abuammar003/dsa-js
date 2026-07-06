@@ -70,7 +70,7 @@ let secondMax = arr4[0];
 for(let i = 0; i < arr4.length; i++) {
 
     if(firstMax < arr4[i]) {
-        secondMax = firstMax;   //Yahan Par sMax me Max Rakhna Hai, Then Fir Aage ki Condition me Smax Find 
+        // secondMax = firstMax;   //Yahan Par sMax me Max Rakhna Hai, Then Fir Aage ki Condition me Smax Find 
                                 // Karna Hai.
         firstMax = arr4[i]
     } 
