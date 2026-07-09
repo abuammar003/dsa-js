@@ -53,15 +53,15 @@ console.log("Chacing 15 is exists:", arr6.includes(15));  //output: false;
 // 8. Combine two arrays into one using .concat().
 let arr7 = [1, 2, 3, 4, 5];
 let arr8 = [6, 7, 8, 9, 10];
-let combineTwoArrays = arr7.concat(arr8);
-console.log(`Combination of Two Arrays is: ${combineTwoArrays}`);
+console.log("Combination of Two Arrays is:", arr7.concat(arr8));
 
  
 
 // 9. Sort the array in Ascending Odred.
 let arr9 = [3, 4, 8, 1, 2, 5];
-let ascendingOrderedArray = arr9.sort((a, b) => a - b);
+let ascendingOrderedArray = arr9.sort((a, b) => a - b);     //((a,b) => b - a); => for Descending Ored.
 console.log("Array sotred in Ascending Order using sort():", ascendingOrderedArray);
+
                 // OR
 for(let i = 0; i <= arr9.length; i++) {
     for(let j = i +1; j <= arr9.length; j++) {
@@ -75,3 +75,18 @@ for(let i = 0; i <= arr9.length; i++) {
     }
 }
 console.log("Array sotred in Ascending Order using Loop:", arr9);
+
+
+
+// 10. Write a program that creats a copy of array without mutating the original.
+let arr10 = [1, 2, 3, 4, 5];
+let copyOfArr10 = [...arr10];
+console.log("Copy of Array arr10 by Spread Operator:", copyOfArr10);
+
+                        // OR
+
+let copyOfArr10ByLoop = [];
+for (let i = 0; i <= arr10.length -1; i++) {
+    copyOfArr10ByLoop.push(arr10[i]);
+}
+console.log("Copy of Array arr10 by Loop", copyOfArr10ByLoop);
