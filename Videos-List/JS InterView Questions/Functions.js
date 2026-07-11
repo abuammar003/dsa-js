@@ -36,4 +36,78 @@ enterArrayAndSum();
 
 
 
-// 3. 
+// 3. Write a Function to Find the Area of the Circle.
+function area(r) {
+    return Math.PI * r * r;        //Formula of Area of the Circle: PI x r square.
+}
+console.log(area(10));
+
+
+
+// 4. Write a Function that checks if a String Starts from a apesific Character.
+function string(str) {
+    if(str[0] === "A") {
+        return "True"
+    } else {
+        return "False"
+    }
+}
+console.log(string("ammar"));
+
+
+
+// 5. Write a Function to find the Maximum of two Numbers.  (10, 20) here 20 is Maxixmum.
+function maxTwoNums(num1, num2) {
+    if(num1 > num2) {
+        return "num1 > num2"
+    } else if (num1 < num2) {
+        return "num1 < num2"
+    } else if (num1 === num2) {
+        return "num1 = num2"
+    }
+} 
+console.log(maxTwoNums(10, 20));
+
+
+
+// 6. Write a Function that Takes a number and return its Factorial.
+function factorialOfNum(num) {
+    let Factorial = 1;
+    for(let i = 1; i <= num; i++) {
+        Factorial *= i;
+    }
+    return Factorial;
+}
+console.log(factorialOfNum(6));
+
+
+
+// 7. Write a Function that Accepts a String and Return its Reverse.
+function strReverse() {
+    let str = "Ammar";
+    for(let i = str.length -1; i >= 0; i--) {
+         console.log(str[i]);
+    }
+    
+                    // OR   (By reverse Method.)
+    return str.split("").reverse().join("");
+}
+console.log(strReverse());
+
+
+
+// 8. Write a Function to Find the Largest number of the Array.
+function largestNumOfArr(arr) {
+    let largest = arr[0];
+
+    for(let i = 0; i <= arr.length; i++) {
+
+        if(largest < arr[i]) {
+            largest = arr[i];
+        }
+    }
+    
+    return largest;
+
+}
+console.log(largestNumOfArr([5, 20, 10, 3, 8]));
