@@ -356,16 +356,39 @@ console.log("MaxSum of the Whole Array(arr15) =", maxSum);
 
 
 
+// 9- Flatten a Nested Array. (using flat() method).
+    console.log("Flatten a Nested Array.");
 
-// 9- Majority Element / Moore's Voting Algorithm.
-
-
-
-
-
-
-
+    //I- Single Flat.  
+    let arr16 = [1, 2, 3, [4, 5], [6]];
+    let flatOne = arr16.flat();
+    console.log("Single flat:", flatOne);
 
 
+    // II- Flat Two.
+    let arr17 = [1, 2, 3, [4, 5, [6]]];
+    let flatTwo = arr17.flat(2);
+    console.log("Flat Two:", flatTwo); 
 
-// 10- Trapping Rain Water.
+
+    // III- Multiple or Infinite Flat.
+    let arr18 = [1, 2, [[3, 4, [5, 6, [7] ]]]];
+    let flatInfinity = arr18.flat(Infinity);
+    console.log("Infinite Flat:", flatInfinity);
+
+
+
+
+
+// 10- Majority Element / Moore's Voting Algorithm.
+
+
+
+
+
+
+
+
+
+
+// 11- Trapping Rain Water.

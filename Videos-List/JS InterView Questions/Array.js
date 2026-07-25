@@ -117,5 +117,5 @@ let obj3 = [
     {name: "jkl", age: 15}
 ];
  
-let minAge18 = obj3.filter(per => per.age >= 18);
+let minAge18 = obj3.filter(person => person.age >= 18);
 console.log(minAge18);
