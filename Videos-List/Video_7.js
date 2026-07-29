@@ -313,3 +313,6 @@ function countVolwels(str) {
     return frequency;
 }
 console.log(countVolwels("I am doing Programming"));
+
+
+

@@ -90,3 +90,32 @@ for (let i = 0; i <= arr10.length -1; i++) {
     copyOfArr10ByLoop.push(arr10[i]);
 }
 console.log("Copy of Array arr10 by Loop", copyOfArr10ByLoop);
+
+
+
+// 11. Reduce Method.
+let arr11 = [1, 2, 3, 4, 5];
+
+let reduce = arr11.reduce((a, b) => {
+    return a + b;
+}, 0)
+console.log(reduce);
+
+
+
+
+// 12. Filter Method.
+let arr12 = [1, 2, 3, 4, 5, 7, 6, 8, 9, 10];
+let evenNUmbers = arr12.filter(num => num%2 === 0);
+console.log(evenNUmbers);
+            // OR
+
+let obj3 = [
+    {name: "abc", age: 56},
+    {name: "def", age: 10},
+    {name: "ghi", age: 21},
+    {name: "jkl", age: 15}
+];
+ 
+let minAge18 = obj3.filter(person => person.age >= 18);
+console.log(minAge18);
