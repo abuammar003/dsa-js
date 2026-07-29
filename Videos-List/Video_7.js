@@ -248,3 +248,68 @@ console.log("Coding Questions Starts Here =>")
     }
 
     console.log(frequency);
+
+
+
+
+// 7- Remove Duplicates from the String.
+
+function removeDuplicate(str) {                 
+    let result = "";
+
+    for(let i = 0; i < str.length; i++) {
+       
+            if(!result.includes(str[i])) {
+                result += str[i];
+            }
+        
+    }
+    return result;
+
+}
+// removeDuplicate("Lallantop");
+console.log(removeDuplicate("Programming"));                   //Output=> progamin ;
+
+                    // OR
+
+function removeDuplicates2(str) {                    
+    let char = str.toLowerCase();
+    let result = [...new Set(char)].join("");
+    return result;
+    
+};
+console.log(removeDuplicates2("Ammar"));                  //Output=> amr ;
+ 
+
+
+
+
+// 8- Count Vowels in the String.
+function countVowel(str) {
+
+    let frequency = {};
+    for(let i = 0; i < str.length; i++) {
+        let char = str[i];
+        let result = char.toLowerCase();
+
+        if("aeiou".includes(result)) {
+            frequency[result] = (frequency[result] || 0) +1;
+        }
+    }
+    return frequency;
+}
+console.log(countVowel("Abu Ammar Akber Shah"));
+
+            // OR
+
+function countVolwels(str) {
+    let frequency = {};
+
+    for(let char of str.toLowerCase()) {
+        if("aeiou".includes(char)) {
+            frequency[char] = (frequency[char] || 0) +1;
+        }
+    }
+    return frequency;
+}
+console.log(countVolwels("I am doing Programming"));

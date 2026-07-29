@@ -8,7 +8,7 @@ for (let i = 1; i <= 50; i++ ) {
 
 
 
-// 2. Write Use a while that somes to print the numbers from 1 to 10.
+// 2. Use a while that sums to print the numbers from 1 to 10.
 let i2 = 1;
 let sum = 0;
 while (i2 <= 10) {
