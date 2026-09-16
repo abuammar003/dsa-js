@@ -285,6 +285,23 @@ console.log(removeDuplicates2("Ammar"));                  //Output=> amr ;
 
 
 // 8- Count Vowels in the String.
+function vowels(string) {
+    let count = 0;
+    
+    for(let i = 0; i < string.length; i++) {
+        
+        if("aeiou".includes(string[i])) {
+            count ++;
+        }
+    }
+    return count;
+
+}
+console.log(vowels("eleminator"))
+
+
+
+// 9- Count Each Vowels in the String.
 function countVowel(str) {
 
     let frequency = {};
