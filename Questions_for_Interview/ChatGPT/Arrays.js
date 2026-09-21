@@ -106,4 +106,99 @@ const arr9 = [5, 20, 18, 10, 9, 16];
 
 
 
-// Q10- 
+// Q10- Create a Copy of Array using (Spread Operator & Loop - By Push() into new Array).
+    const arr10 = [1, 2, 3, 4, 5];
+
+    // Using Apread Operator
+    const arr10UsingSpread = [...arr10];
+    console.log("Q10-", arr10UsingSpread);
+
+    // Using Loop - By Push() into new Array.
+    const arr10UsingLoop = [];
+
+    for(let i = 0; i < arr10.length; i++) {
+        arr10UsingLoop.push(arr10[i]);
+    }
+
+    console.log("Q10-", arr10UsingLoop);
+
+
+
+
+// Q11- Storing Values in Array By Prompt.
+    const arr11 = new Array(5);
+
+    for(let i = 0; i < arr11.length; i++ ) {
+        // arr11[i] = prompt("Enter A Value");
+    }
+    console.log("Q11-", arr11);
+
+
+
+
+// Q12- Sum of Elements of the Array.
+    const arr12 = [1, 2, 3, 4, 5];
+    let sumOfArr12 = 0;
+
+    for (let i = 0; i < arr12.length; i++) {
+        sumOfArr12 = sumOfArr12 + arr12[i];
+    }
+    console.log("Q12-", sumOfArr12);
+
+
+
+
+// Q13- Finding Mximum Value From the Array.
+    const arr13 = [10, 20, 35, 9, 14, 25];
+    let maxVaueOfArr13 = arr13[0];
+
+    for(let i = 0; i < arr13.length; i++) {
+        if(maxVaueOfArr13 < arr13[i]) {
+            maxVaueOfArr13 = arr13[i];
+        }
+    }
+    console.log("Q13-", maxVaueOfArr13);
+
+
+
+
+// Q14- Finding Max & Second Max Value from the Array.
+    const arr14 = [10, 20, 35, 9, 14, 25];
+    let maxVaueOfArr14 = arr14[0];
+    let SecondmaxVaueOfArr14 = arr14[0];
+
+    for(let i = 0; i < arr14.length; i++) {
+
+        if(maxVaueOfArr14 < arr14[i]) {
+            maxVaueOfArr14 =+ arr14[i];
+        } else if (SecondmaxVaueOfArr14 < arr14[i] && maxVaueOfArr14 > arr14[i]) {
+            SecondmaxVaueOfArr14 =+ arr14[i];
+        }
+
+    };
+    console.log("Q14-", `Max Value = ${maxVaueOfArr14}`);
+    console.log("Q14-", `Second Max Value = ${SecondmaxVaueOfArr14}`);
+
+
+
+
+// Q15- Reversing an Array using (reverse() & Loop- rev Loop and push);
+    const arr15 = [1, 2, 3, 4, 5];
+
+    // Using reverse().
+    const reverseUsingMethod = arr15.reverse();
+    console.log("Q15-", reverseUsingMethod);
+
+
+    // Using Loop.
+    const reverseUsingLoop = [];
+
+    for(let i = 0; i < arr15.length; i++) {
+        reverseUsingLoop.push(arr15[i]);
+    };
+    console.log("Q15-", reverseUsingLoop);
+
+
+
+
+// Q16- 
