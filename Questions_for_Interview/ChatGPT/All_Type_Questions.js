@@ -226,8 +226,220 @@ if(Str4I.length != Str4II.length) {
             break
         } 
         frequencyOfStr4[Str4II] --;
-        
     }
     
     console.log("Q14", true)
 }
+
+
+
+
+// Q15- Find the missing Number.
+let Arr9 = [1, 2, 4, 5, 6, 7, 8];
+
+for(let i = 0; i < Arr9.length -1; i++) {
+    
+    if(Arr9[i] +1 != Arr9[i +1]) {
+        console.log("Q15-", Arr9[i] +1)
+    } 
+    
+}
+
+
+
+
+// Q16- Move All Zeros to the End.
+let Arr10 = [0, 1, 0, 3, 12];
+let j = Arr10[0];
+
+for(let i = 0; i < Arr10.length; i++) {
+    // let j = Arr10[Arr10.length -1];
+    // console.log(j)
+
+    if(Arr10[i] != 0) {
+        let temp = Arr10[i];
+        Arr10[i] = Arr10[j];
+        Arr10[j] = temp
+        
+        j++
+    }
+}
+console.log("Q16-", Arr10);
+
+    // Move All Zeros to Start.
+let Arr11 = [0, 1, 0, 3, 12];
+let k = 0;
+
+for(let i = 0; i < Arr11.length; i++) {
+
+    if(Arr11[i] === 0) {
+        let temp = Arr11[i];
+        Arr11[i] = Arr11[k];
+        Arr11[k] = temp;
+
+        k++;
+    }
+}
+console.log("Q16-", Arr11);
+
+
+
+
+// Q17- Find Common Elements Between Two Arrays.
+let Arr12 = [1, 2, 3, 4];
+let Arr13 = [3, 4, 5, 6];
+let commonValue = [];
+
+
+for( let i = 0; i < Arr12.length; i++) {
+    for(let j = 0; j < Arr13.length; j++) {
+
+        if(Arr12[i] === Arr13[j]) {
+            commonValue.push(Arr12[i])
+        }
+
+    }
+}
+console.log("Q17-", commonValue);
+
+
+
+
+// Q18- Find the Longest Word in Sentence.
+let Str5 = "I am Learning JavScript";
+
+
+
+
+
+// Q19- Count Vovels in the String.
+function CountVowels(str) {
+    let count = 0;
+
+    for(let i = 0; i < str.length; i++) {
+
+        if("aeiou".includes(str[i])) {
+            count ++
+        }
+    }
+    return count;
+}
+console.log(CountVowels("ammar"));
+
+
+
+
+// 20- FizzBuzz
+    // Print numbers from 1 to /]]20:
+    // divisible by 3 → Fizz
+    // divisible by 5 → Buzz
+    // divisible by both → FizzBuzz 
+
+function fizzBuzz(arr) {
+    
+    for(let i = 0; i < arr.length; i++) {
+
+        if(arr[i] %3 === 0 && arr[i] %5 === 0) {
+            console.log(`Q20- ${arr[i]} : FizzBuzz`)
+        } else if(arr[i] %3 === 0) {
+            console.log(`Q20- ${arr[i]} : Fizz`);
+        } else if (arr[i] %5 === 0) {
+            console.log(`Q20- ${arr[i]} : Buzz`)
+        } 
+
+    }
+}
+console.log(fizzBuzz([1, 2, 3, 4, 5, 6, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]));
+
+
+
+
+// Q21- Best Time to BUY and SELL Stock.
+let arr = [3, 2, 1, 5, 4, 6];
+
+let lowestValue = arr[0];
+let maxValue = arr[0];
+
+for(let i = 0; i < arr.length; i++) {
+
+    if (lowestValue > arr[i]) {
+        lowestValue = arr[i];
+    } else if(maxValue < arr[i] ) {
+        maxValue = arr[i];
+    } 
+}
+
+let totalProfit = maxValue - lowestValue;
+
+console.log(totalProfit);
+
+
+
+
+// Q22- Sort Peoples based on Hieght.
+
+let name = ['saad', 'ammar', 'basit'];
+let hieght = [175, 180, 176];
+
+for(let i = 0; i < hieght.length; i++) {
+    for(let j = i +1; j < hieght.length; j++) {
+
+        if(hieght[i] < hieght[j]) {
+            let tempHieght = hieght[i];
+            hieght[i] = hieght[j];
+            hieght[j] = tempHieght;
+
+            let tempName = name[i];
+            name[i] = name[j];
+            name[j] = tempName
+        }
+    
+    }
+}
+console.log(name);
+
+
+
+
+// Q23- Merge Sorted Array.
+let arr1 = [1, 3, 4, 6, 9];
+let arr2 = [2, 5, 7, 8];
+let result = new Array(arr1.length + arr2.length);
+
+let i=0, j2 =0, k2 = 0;
+
+while(i < arr1.length && j2 < arr2.length) {
+
+
+        if(arr1[i] < arr2[j2]) {
+            result[k2] = arr1[i];
+            k2++; i++
+        } else {
+            result[k2] = arr2[j2];
+            k2++; j2++
+        }
+
+    
+}
+console.log(result);
+
+
+
+
+// Q24- Rotation of Element By K value from Propmt. (Left Rotation).
+let arr5 = [1, 2, 3, 4, 5];
+
+let k3 = 3;
+
+for (let j = 0; j < k3; j++) {              
+   
+    //Normal Left Rotation By 1 element.
+    let lastValue = arr5[0];
+    for (let i = 0; i < arr5.length -1; i++) {
+        arr5[i] = arr5[i +1];
+    }
+    arr5[arr5.length -1] = lastValue;
+
+}
+console.log(arr5)
+
